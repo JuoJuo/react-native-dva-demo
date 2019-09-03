@@ -6,7 +6,7 @@ export { connect }
 
 export default function(options) {
   const app = create(options);
-  // HMR workaround
+  // 热更新解决方案
   if (!global.registered) options.models.forEach(model => app.model(model));
   global.registered = true;
 

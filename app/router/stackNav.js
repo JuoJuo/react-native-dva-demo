@@ -1,14 +1,20 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import BottomTabNavigator from './bottomNav';
-import Splash from '../pages/Splash';
+import Login from '../pages/Login';
 
-const StackNavigator = createStackNavigator({
-  Splash: {
-    screen: Splash,
+const StackNavigator = createStackNavigator(
+  {
+    Login: {
+      screen: Login,
+    },
+    BottomTabNavigator: {
+      screen: BottomTabNavigator
+    },
   },
-  BottomTabNavigator: {
-    screen: BottomTabNavigator
-  },
-});
+  {
+    initialRouteName: 'Login',
+    headerMode: 'none',
+  }
+);
 
 export default StackNavigator;
